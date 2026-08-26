@@ -99,14 +99,14 @@ img, video, canvas, svg { max-width: 100%; max-height: 100%; }
 .game-icon { width: 56px; height: 56px; border-radius: 14px; object-fit: cover; box-shadow: 0 4px 14px rgba(0,0,0,0.4); flex-shrink: 0; }
 .rank-info { flex: 1; min-width: 0; }
 .rank-name { font-family: var(--font-display); font-size: 27px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.rank-pub { font-size: 19px; color: var(--text-secondary); margin-top: 1px; }
+.rank-pub { font-size: 18px; color: var(--text-secondary); margin-top: 1px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .rank-delta { width: 80px; text-align: center; }
 .delta { font-family: var(--font-display); font-size: 22px; font-weight: 600; padding: 3px 10px; border-radius: 8px; }
 .delta.up { color: var(--green); background: rgba(52,211,153,0.12); }
 .delta.down { color: var(--red); background: rgba(248,113,113,0.12); }
 .delta.neutral { color: var(--text-secondary); }
 .delta.new { color: var(--accent2); background: rgba(245,158,11,0.14); }
-.rank-val { font-family: var(--font-display); font-size: 26px; font-weight: 700; min-width: 140px; text-align: right; }
+.rank-val { font-family: var(--font-display); font-size: clamp(19px, 1.35vw, 24px); font-weight: 700; min-width: 0; flex-shrink: 1; text-align: right; white-space: nowrap; }
 .rank-val-sm { font-size: 21px; min-width: 180px; color: var(--text-secondary); }
 .rank-more { position: absolute; bottom: 44px; left: 96px; font-size: 22px; color: var(--text-secondary); }
 
@@ -480,8 +480,8 @@ body.edit-mode [contenteditable] { outline: 2px dashed var(--accent); outline-of
 <section class="slide">
   <div class="slide-header reveal"><div class="section-tag">GLOBAL · HAREKET</div><h2>Sıçrayanlar &amp; Hareketliler</h2><div class="rule"></div></div>
   <div class="mv-cols">
-    <div class="mv-col"><div class="mv-col-title reveal">▲ En Büyük Çıkışlar</div><div class="mv-row reveal"><div class="mv-name">Free Fire MAX<br><small style="color:#8b93a7;font-size:13px">GARENA INTERNATIONAL I PRIVATE LIMITED</small></div><div class="mv-pub"><small style="color:#8b93a7;font-size:13px">WoW —</small></div><div class="mv-delta up"><span class="delta up">▲77</span></div></div><div class="mv-row reveal"><div class="mv-name">Ludo King<br><small style="color:#8b93a7;font-size:13px">GAMETION GLOBAL TECHNOLOGIES PTE LIMITED</small></div><div class="mv-pub"><small style="color:#8b93a7;font-size:13px">WoW —</small></div><div class="mv-delta up"><span class="delta up">▲18</span></div></div><div class="mv-row reveal"><div class="mv-name">Pizza Ready!<br><small style="color:#8b93a7;font-size:13px">Supercent, Inc.</small></div><div class="mv-pub"><small style="color:#8b93a7;font-size:13px">WoW —</small></div><div class="mv-delta up"><span class="delta up">▲12</span></div></div><div class="mv-row reveal"><div class="mv-name">Mob Control<br><small style="color:#8b93a7;font-size:13px">Voodoo</small></div><div class="mv-pub"><small style="color:#8b93a7;font-size:13px">WoW —</small></div><div class="mv-delta up"><span class="delta up">▲10</span></div></div></div>
-    <div class="mv-col"><div class="mv-col-title reveal">▼ En Büyük Düşüşler</div><div class="mv-row reveal"><div class="mv-name">EA SPORTS FC Soccer Mobile 26<br><small style="color:#8b93a7;font-size:13px">Electronic Arts</small></div><div class="mv-pub"><small style="color:#8b93a7;font-size:13px">WoW —</small></div><div class="mv-delta down"><span class="delta down">▼10</span></div></div><div class="mv-row reveal"><div class="mv-name">eFootball™<br><small style="color:#8b93a7;font-size:13px">KONAMI</small></div><div class="mv-pub"><small style="color:#8b93a7;font-size:13px">WoW —</small></div><div class="mv-delta down"><span class="delta down">▼10</span></div></div><div class="mv-row reveal"><div class="mv-name">School Party Craft<br><small style="color:#8b93a7;font-size:13px">Candy Room Games &amp; RabbitCo Limited</small></div><div class="mv-pub"><small style="color:#8b93a7;font-size:13px">WoW —</small></div><div class="mv-delta down"><span class="delta down">▼9</span></div></div><div class="mv-row reveal"><div class="mv-name">My Talking Tom 2: Pet Game<br><small style="color:#8b93a7;font-size:13px">Outfit7 Limited</small></div><div class="mv-pub"><small style="color:#8b93a7;font-size:13px">WoW —</small></div><div class="mv-delta down"><span class="delta down">▼7</span></div></div></div>
+    <div class="mv-col"><div class="mv-col-title reveal">▲ En Büyük Çıkışlar</div><div class="mv-row reveal"><div class="mv-name">Free Fire MAX<br><small style="color:#8b93a7;font-size:13px">GARENA INTERNATIONAL I PRIVATE LIMITED</small></div><div class="mv-pub"><small style="color:#8b93a7;font-size:13px">WoW verisi yok</small></div><div class="mv-delta up"><span class="delta up">▲77</span></div></div><div class="mv-row reveal"><div class="mv-name">Ludo King<br><small style="color:#8b93a7;font-size:13px">GAMETION GLOBAL TECHNOLOGIES PTE LIMITED</small></div><div class="mv-pub"><small style="color:#8b93a7;font-size:13px">WoW verisi yok</small></div><div class="mv-delta up"><span class="delta up">▲18</span></div></div><div class="mv-row reveal"><div class="mv-name">Pizza Ready!<br><small style="color:#8b93a7;font-size:13px">Supercent, Inc.</small></div><div class="mv-pub"><small style="color:#8b93a7;font-size:13px">WoW verisi yok</small></div><div class="mv-delta up"><span class="delta up">▲12</span></div></div><div class="mv-row reveal"><div class="mv-name">Mob Control<br><small style="color:#8b93a7;font-size:13px">Voodoo</small></div><div class="mv-pub"><small style="color:#8b93a7;font-size:13px">WoW verisi yok</small></div><div class="mv-delta up"><span class="delta up">▲10</span></div></div></div>
+    <div class="mv-col"><div class="mv-col-title reveal">▼ En Büyük Düşüşler</div><div class="mv-row reveal"><div class="mv-name">EA SPORTS FC Soccer Mobile 26<br><small style="color:#8b93a7;font-size:13px">Electronic Arts</small></div><div class="mv-pub"><small style="color:#8b93a7;font-size:13px">WoW verisi yok</small></div><div class="mv-delta down"><span class="delta down">▼10</span></div></div><div class="mv-row reveal"><div class="mv-name">eFootball™<br><small style="color:#8b93a7;font-size:13px">KONAMI</small></div><div class="mv-pub"><small style="color:#8b93a7;font-size:13px">WoW verisi yok</small></div><div class="mv-delta down"><span class="delta down">▼10</span></div></div><div class="mv-row reveal"><div class="mv-name">School Party Craft<br><small style="color:#8b93a7;font-size:13px">Candy Room Games &amp; RabbitCo Limited</small></div><div class="mv-pub"><small style="color:#8b93a7;font-size:13px">WoW verisi yok</small></div><div class="mv-delta down"><span class="delta down">▼9</span></div></div><div class="mv-row reveal"><div class="mv-name">My Talking Tom 2: Pet Game<br><small style="color:#8b93a7;font-size:13px">Outfit7 Limited</small></div><div class="mv-pub"><small style="color:#8b93a7;font-size:13px">WoW verisi yok</small></div><div class="mv-delta down"><span class="delta down">▼7</span></div></div></div>
   </div>
 </section>
 <section class="slide">
@@ -678,12 +678,12 @@ body.edit-mode [contenteditable] { outline: 2px dashed var(--accent); outline-of
 <section class="slide">
   <div class="slide-header reveal"><div class="section-tag">USA · HAREKET</div><h2>Sıçrayanlar &amp; Hareketliler</h2><div class="rule"></div></div>
   <div class="mv-cols">
-    <div class="mv-col"><div class="mv-col-title reveal">▲ En Büyük Çıkışlar</div><div class="mv-row reveal"><div class="mv-name">Mahjong Blast<br><small style="color:#8b93a7;font-size:13px">Nebula Studio</small></div><div class="mv-pub"><small style="color:#8b93a7;font-size:13px">WoW —</small></div><div class="mv-delta up"><span class="delta up">▲11</span></div></div><div class="mv-row reveal"><div class="mv-name">Jigsaw Drop: Solitaire Puzzle<br><small style="color:#8b93a7;font-size:13px">Runyou Game</small></div><div class="mv-pub"><small style="color:#8b93a7;font-size:13px">WoW —</small></div><div class="mv-delta up"><span class="delta up">▲10</span></div></div><div class="mv-row reveal"><div class="mv-name">Loop Sort<br><small style="color:#8b93a7;font-size:13px">Voodoo</small></div><div class="mv-pub"><small style="color:#8b93a7;font-size:13px">WoW —</small></div><div class="mv-delta up"><span class="delta up">▲8</span></div></div><div class="mv-row reveal"><div class="mv-name">Meowdoku!<br><small style="color:#8b93a7;font-size:13px">Oakever Games</small></div><div class="mv-pub"><small style="color:#8b93a7;font-size:13px">WoW —</small></div><div class="mv-delta up"><span class="delta up">▲2</span></div></div></div>
-    <div class="mv-col"><div class="mv-col-title reveal">▼ En Büyük Düşüşler</div><div class="mv-row reveal"><div class="mv-name">Jewel Coloring<br><small style="color:#8b93a7;font-size:13px">Ta Ta Game Technology Limited</small></div><div class="mv-pub"><small style="color:#8b93a7;font-size:13px">WoW —</small></div><div class="mv-delta down"><span class="delta down">▼11</span></div></div><div class="mv-row reveal"><div class="mv-name">82-0.com<br><small style="color:#8b93a7;font-size:13px">Vaulty Studios Inc.</small></div><div class="mv-pub"><small style="color:#8b93a7;font-size:13px">WoW —</small></div><div class="mv-delta down"><span class="delta down">▼5</span></div></div><div class="mv-row reveal"><div class="mv-name">Arrows – Puzzle Escape<br><small style="color:#8b93a7;font-size:13px">Lessmore GmbH</small></div><div class="mv-pub"><small style="color:#8b93a7;font-size:13px">WoW —</small></div><div class="mv-delta down"><span class="delta down">▼4</span></div></div><div class="mv-row reveal"><div class="mv-name">CubeAway - 3DPuzzle<br><small style="color:#8b93a7;font-size:13px">GOODROID,Inc.</small></div><div class="mv-pub"><small style="color:#8b93a7;font-size:13px">WoW —</small></div><div class="mv-delta down"><span class="delta down">▼3</span></div></div></div>
+    <div class="mv-col"><div class="mv-col-title reveal">▲ En Büyük Çıkışlar</div><div class="mv-row reveal"><div class="mv-name">Mahjong Blast<br><small style="color:#8b93a7;font-size:13px">Nebula Studio</small></div><div class="mv-pub"><small style="color:#8b93a7;font-size:13px">WoW verisi yok</small></div><div class="mv-delta up"><span class="delta up">▲11</span></div></div><div class="mv-row reveal"><div class="mv-name">Jigsaw Drop: Solitaire Puzzle<br><small style="color:#8b93a7;font-size:13px">Runyou Game</small></div><div class="mv-pub"><small style="color:#8b93a7;font-size:13px">WoW verisi yok</small></div><div class="mv-delta up"><span class="delta up">▲10</span></div></div><div class="mv-row reveal"><div class="mv-name">Loop Sort<br><small style="color:#8b93a7;font-size:13px">Voodoo</small></div><div class="mv-pub"><small style="color:#8b93a7;font-size:13px">WoW verisi yok</small></div><div class="mv-delta up"><span class="delta up">▲8</span></div></div><div class="mv-row reveal"><div class="mv-name">Meowdoku!<br><small style="color:#8b93a7;font-size:13px">Oakever Games</small></div><div class="mv-pub"><small style="color:#8b93a7;font-size:13px">WoW verisi yok</small></div><div class="mv-delta up"><span class="delta up">▲2</span></div></div></div>
+    <div class="mv-col"><div class="mv-col-title reveal">▼ En Büyük Düşüşler</div><div class="mv-row reveal"><div class="mv-name">Jewel Coloring<br><small style="color:#8b93a7;font-size:13px">Ta Ta Game Technology Limited</small></div><div class="mv-pub"><small style="color:#8b93a7;font-size:13px">WoW verisi yok</small></div><div class="mv-delta down"><span class="delta down">▼11</span></div></div><div class="mv-row reveal"><div class="mv-name">82-0.com<br><small style="color:#8b93a7;font-size:13px">Vaulty Studios Inc.</small></div><div class="mv-pub"><small style="color:#8b93a7;font-size:13px">WoW verisi yok</small></div><div class="mv-delta down"><span class="delta down">▼5</span></div></div><div class="mv-row reveal"><div class="mv-name">Arrows – Puzzle Escape<br><small style="color:#8b93a7;font-size:13px">Lessmore GmbH</small></div><div class="mv-pub"><small style="color:#8b93a7;font-size:13px">WoW verisi yok</small></div><div class="mv-delta down"><span class="delta down">▼4</span></div></div><div class="mv-row reveal"><div class="mv-name">CubeAway - 3DPuzzle<br><small style="color:#8b93a7;font-size:13px">GOODROID,Inc.</small></div><div class="mv-pub"><small style="color:#8b93a7;font-size:13px">WoW verisi yok</small></div><div class="mv-delta down"><span class="delta down">▼3</span></div></div></div>
   </div>
 </section>
 <section class="slide">
-  <div class="slide-header reveal"><div class="section-tag">BEST · 21 KREATİF</div><h2>Best Creatives (1/6)</h2><div class="rule"></div></div>
+  <div class="slide-header reveal"><div class="section-tag">BEST · 23 KREATİF</div><h2>Best Creatives (1/6)</h2><div class="rule"></div></div>
   <div class="cre-grid"><div class="cre-card reveal">
   <div class="cre-media"><video class="cre-video" src="_embed/cc6217dfa0e43f56.mp4" poster="_embed/cc6217dfa0e43f56.jpg" muted playsinline preload="metadata"></video></div>
   <div class="cre-meta"><div class="cre-game">Tasty Travels: Merge Game<span class="cre-role competitor">RAKİP</span></div><div class="cre-stats"><span>100% SOV</span><span>1 ad</span><span>Unity</span></div></div>
@@ -699,7 +699,7 @@ body.edit-mode [contenteditable] { outline: 2px dashed var(--accent); outline-of
 </div></div>
 </section>
 <section class="slide">
-  <div class="slide-header reveal"><div class="section-tag">BEST · 21 KREATİF</div><h2>Best Creatives (2/6)</h2><div class="rule"></div></div>
+  <div class="slide-header reveal"><div class="section-tag">BEST · 23 KREATİF</div><h2>Best Creatives (2/6)</h2><div class="rule"></div></div>
   <div class="cre-grid"><div class="cre-card reveal">
   <div class="cre-media"><video class="cre-video" src="_embed/b0208341c2687fa2.mp4" poster="_embed/b0208341c2687fa2.jpg" muted playsinline preload="metadata"></video></div>
   <div class="cre-meta"><div class="cre-game">Gangstar Mirage City: Online<span class="cre-role new_test">YENİ GİRİŞ</span></div><div class="cre-stats"><span>25.6% SOV</span><span>2 ad</span><span>Applovin</span></div></div>
@@ -707,76 +707,73 @@ body.edit-mode [contenteditable] { outline: 2px dashed var(--accent); outline-of
   <div class="cre-media"><video class="cre-video" src="_embed/7bedafc5bba7ee8f.mp4" poster="_embed/7bedafc5bba7ee8f.jpg" muted playsinline preload="metadata"></video></div>
   <div class="cre-meta"><div class="cre-game">Connect Tracks: Logic Puzzle<span class="cre-role pool">HAVUZ</span></div><div class="cre-stats"><span>100% SOV</span><span>1 ad</span><span>Unity</span></div></div>
 </div><div class="cre-card reveal">
+  <div class="cre-media"><video class="cre-video" src="_embed/2ca64012bbe7f384.mp4" poster="_embed/2ca64012bbe7f384.jpg" muted playsinline preload="metadata"></video></div>
+  <div class="cre-meta"><div class="cre-game">Codename Crime-Vice Open World<span class="cre-role pool">HAVUZ</span></div><div class="cre-stats"><span>50.0% SOV</span><span>1 ad</span><span>Unity</span></div></div>
+</div><div class="cre-card reveal">
+  <div class="cre-media"><video class="cre-video" src="_embed/7759bb36319cbee6.mp4" poster="_embed/7759bb36319cbee6.jpg" muted playsinline preload="metadata"></video></div>
+  <div class="cre-meta"><div class="cre-game">Codename Crime-Vice Open World<span class="cre-role pool">HAVUZ</span></div><div class="cre-stats"><span>50.0% SOV</span><span>1 ad</span><span>Unity</span></div></div>
+</div></div>
+</section>
+<section class="slide">
+  <div class="slide-header reveal"><div class="section-tag">BEST · 23 KREATİF</div><h2>Best Creatives (3/6)</h2><div class="rule"></div></div>
+  <div class="cre-grid"><div class="cre-card reveal">
   <div class="cre-media"><video class="cre-video" src="_embed/60234a3fb37c433a.mp4" poster="_embed/60234a3fb37c433a.jpg" muted playsinline preload="metadata"></video></div>
   <div class="cre-meta"><div class="cre-game">Amaze GO!<span class="cre-role pool">HAVUZ</span></div><div class="cre-stats"><span>37.4% SOV</span><span>2 ad</span><span>Admob</span></div></div>
 </div><div class="cre-card reveal">
   <div class="cre-media"><video class="cre-video" src="_embed/a90e5a2b847c75e5.mp4" poster="_embed/a90e5a2b847c75e5.jpg" muted playsinline preload="metadata"></video></div>
   <div class="cre-meta"><div class="cre-game">Kingshot<span class="cre-role pool">HAVUZ</span></div><div class="cre-stats"><span>28.2% SOV</span><span>—</span><span>Unity</span></div></div>
-</div></div>
-</section>
-<section class="slide">
-  <div class="slide-header reveal"><div class="section-tag">BEST · 21 KREATİF</div><h2>Best Creatives (3/6)</h2><div class="rule"></div></div>
-  <div class="cre-grid"><div class="cre-card reveal">
+</div><div class="cre-card reveal">
   <div class="cre-media"><video class="cre-video" src="_embed/61876ebcf446535f.mp4" poster="_embed/61876ebcf446535f.jpg" muted playsinline preload="metadata"></video></div>
   <div class="cre-meta"><div class="cre-game">Candy Crush Saga<span class="cre-role pool">HAVUZ</span></div><div class="cre-stats"><span>19.8% SOV</span><span>3 ad</span><span>Admob</span></div></div>
 </div><div class="cre-card reveal">
   <div class="cre-media"><video class="cre-video" src="_embed/76cd105c40ebb0a0.mp4" poster="_embed/76cd105c40ebb0a0.jpg" muted playsinline preload="metadata"></video></div>
   <div class="cre-meta"><div class="cre-game">Amaze GO!<span class="cre-role pool">HAVUZ</span></div><div class="cre-stats"><span>8.4% SOV</span><span>2 ad</span><span>Admob</span></div></div>
-</div><div class="cre-card reveal">
+</div></div>
+</section>
+<section class="slide">
+  <div class="slide-header reveal"><div class="section-tag">BEST · 23 KREATİF</div><h2>Best Creatives (4/6)</h2><div class="rule"></div></div>
+  <div class="cre-grid"><div class="cre-card reveal">
   <div class="cre-media"><video class="cre-video" src="_embed/0c37b1fd2d5a9d56.mp4" poster="_embed/0c37b1fd2d5a9d56.jpg" muted playsinline preload="metadata"></video></div>
   <div class="cre-meta"><div class="cre-game">Royal Kingdom<span class="cre-role pool">HAVUZ</span></div><div class="cre-stats"><span>3.8% SOV</span><span>492 ad</span><span>Applovin</span></div></div>
 </div><div class="cre-card reveal">
   <div class="cre-media"><video class="cre-video" src="_embed/4543d43af66792ed.mp4" poster="_embed/4543d43af66792ed.jpg" muted playsinline preload="metadata"></video></div>
   <div class="cre-meta"><div class="cre-game">Royal Match<span class="cre-role pool">HAVUZ</span></div><div class="cre-stats"><span>3.5% SOV</span><span>465 ad</span><span>Applovin</span></div></div>
-</div></div>
-</section>
-<section class="slide">
-  <div class="slide-header reveal"><div class="section-tag">BEST · 21 KREATİF</div><h2>Best Creatives (4/6)</h2><div class="rule"></div></div>
-  <div class="cre-grid"><div class="cre-card reveal">
+</div><div class="cre-card reveal">
   <div class="cre-media"><video class="cre-video" src="_embed/0ca1eeca129bcf18.mp4" poster="_embed/0ca1eeca129bcf18.jpg" muted playsinline preload="metadata"></video></div>
   <div class="cre-meta"><div class="cre-game">Whiteout Survival<span class="cre-role pool">HAVUZ</span></div><div class="cre-stats"><span>1.3% SOV</span><span>83 ad</span><span>Admob</span></div></div>
 </div><div class="cre-card reveal">
   <div class="cre-media"><video class="cre-video" src="_embed/d3bc881b517e704c.mp4" poster="_embed/d3bc881b517e704c.jpg" muted playsinline preload="metadata"></video></div>
   <div class="cre-meta"><div class="cre-game">MONOPOLY GO!<span class="cre-role pool">HAVUZ</span></div><div class="cre-stats"><span>0.8% SOV</span><span>78 ad</span><span>Admob</span></div></div>
-</div><div class="cre-card reveal">
+</div></div>
+</section>
+<section class="slide">
+  <div class="slide-header reveal"><div class="section-tag">BEST · 23 KREATİF</div><h2>Best Creatives (5/6)</h2><div class="rule"></div></div>
+  <div class="cre-grid"><div class="cre-card reveal">
   <div class="cre-media"><video class="cre-video" src="_embed/c8de36f5ac6df5b7.mp4" poster="_embed/c8de36f5ac6df5b7.jpg" muted playsinline preload="metadata"></video></div>
   <div class="cre-meta"><div class="cre-game">Township<span class="cre-role pool">HAVUZ</span></div><div class="cre-stats"><span>0.7% SOV</span><span>213 ad</span><span>Applovin</span></div></div>
 </div><div class="cre-card reveal">
   <div class="cre-media"><video class="cre-video" src="_embed/1f10cdfa5c9c62d5.mp4" poster="_embed/1f10cdfa5c9c62d5.jpg" muted playsinline preload="metadata"></video></div>
   <div class="cre-meta"><div class="cre-game">Royal Kingdom<span class="cre-role pool">HAVUZ</span></div><div class="cre-stats"><span>0.6% SOV</span><span>256 ad</span><span>Applovin</span></div></div>
-</div></div>
-</section>
-<section class="slide">
-  <div class="slide-header reveal"><div class="section-tag">BEST · 21 KREATİF</div><h2>Best Creatives (5/6)</h2><div class="rule"></div></div>
-  <div class="cre-grid"><div class="cre-card reveal">
+</div><div class="cre-card reveal">
   <div class="cre-media"><video class="cre-video" src="_embed/903787ec73cbc985.mp4" poster="_embed/903787ec73cbc985.jpg" muted playsinline preload="metadata"></video></div>
   <div class="cre-meta"><div class="cre-game">Roblox<span class="cre-role pool">HAVUZ</span></div><div class="cre-stats"><span>0.4% SOV</span><span>65 ad</span><span>Admob</span></div></div>
 </div><div class="cre-card reveal">
   <div class="cre-media"><video class="cre-video" src="_embed/9e553f334796fc6d.mp4" poster="_embed/9e553f334796fc6d.jpg" muted playsinline preload="metadata"></video></div>
   <div class="cre-meta"><div class="cre-game">Township<span class="cre-role pool">HAVUZ</span></div><div class="cre-stats"><span>0.3% SOV</span><span>175 ad</span><span>Applovin</span></div></div>
-</div><div class="cre-card reveal">
+</div></div>
+</section>
+<section class="slide">
+  <div class="slide-header reveal"><div class="section-tag">BEST · 23 KREATİF</div><h2>Best Creatives (6/6)</h2><div class="rule"></div></div>
+  <div class="cre-grid"><div class="cre-card reveal">
   <div class="cre-media"><video class="cre-video" src="_embed/b7cd8abc2a84c388.mp4" poster="_embed/b7cd8abc2a84c388.jpg" muted playsinline preload="metadata"></video></div>
   <div class="cre-meta"><div class="cre-game">Magic Sort!<span class="cre-role pool">HAVUZ</span></div><div class="cre-stats"><span>0.3% SOV</span><span>101 ad</span><span>Applovin</span></div></div>
 </div><div class="cre-card reveal">
   <div class="cre-media"><video class="cre-video" src="_embed/6ba77da6a71f1210.mp4" poster="_embed/6ba77da6a71f1210.jpg" muted playsinline preload="metadata"></video></div>
   <div class="cre-meta"><div class="cre-game">Pokémon GO<span class="cre-role pool">HAVUZ</span></div><div class="cre-stats"><span>0.3% SOV</span><span>71 ad</span><span>Admob</span></div></div>
-</div></div>
-</section>
-<section class="slide">
-  <div class="slide-header reveal"><div class="section-tag">BEST · 21 KREATİF</div><h2>Best Creatives (6/6)</h2><div class="rule"></div></div>
-  <div class="cre-grid"><div class="cre-card reveal">
+</div><div class="cre-card reveal">
   <div class="cre-media"><video class="cre-video" src="_embed/a4311890416475df.mp4" poster="_embed/a4311890416475df.jpg" muted playsinline preload="metadata"></video></div>
   <div class="cre-meta"><div class="cre-game">Gardenscapes<span class="cre-role pool">HAVUZ</span></div><div class="cre-stats"><span>0.2% SOV</span><span>110 ad</span><span>Applovin</span></div></div>
 </div></div>
-</section>
-<section class="slide">
-  <div class="slide-header reveal"><div class="section-tag">KREATİF TREND</div><h2>Kreatif Trendleri</h2><div class="rule"></div></div>
-  <div class="slide-sub reveal">Hook dağılımı · gösterim bucket'ları · taze test vs uzun soluklu (21 kreatif)</div>
-  <div class="trend-cols">
-    <div class="trend-col"><div class="trend-col-title">HOOK DAĞILIMI</div><div class="trend-note">Kreatif metinleri bu hafta API'de boş — hook sınıflandırması yapılamadı (gösterim/yaş blokları dolu).</div></div>
-    <div class="trend-col"><div class="trend-col-title">GÖSTERİM BUCKET'LARI</div><div class="trend-row"><div class="trend-lbl">500K-1M</div><div class="trend-track"><div class="trend-fill" style="width:100%"></div></div><div class="trend-val">5</div></div><div class="trend-row"><div class="trend-lbl">1K-5K</div><div class="trend-track"><div class="trend-fill" style="width:100%"></div></div><div class="trend-val">5</div></div><div class="trend-row"><div class="trend-lbl">1M+</div><div class="trend-track"><div class="trend-fill" style="width:60%"></div></div><div class="trend-val">3</div></div><div class="trend-row"><div class="trend-lbl">5K-10K</div><div class="trend-track"><div class="trend-fill" style="width:60%"></div></div><div class="trend-val">3</div></div><div class="trend-row"><div class="trend-lbl">50K-100K</div><div class="trend-track"><div class="trend-fill" style="width:40%"></div></div><div class="trend-val">2</div></div><div class="trend-row"><div class="trend-lbl">200K-500K</div><div class="trend-track"><div class="trend-fill" style="width:20%"></div></div><div class="trend-val">1</div></div><div class="trend-row"><div class="trend-lbl">100K-200K</div><div class="trend-track"><div class="trend-fill" style="width:20%"></div></div><div class="trend-val">1</div></div><div class="trend-row"><div class="trend-lbl">10K-50K</div><div class="trend-track"><div class="trend-fill" style="width:20%"></div></div><div class="trend-val">1</div></div></div>
-    <div class="trend-col"><div class="trend-col-title">TAZE TEST vs UZUN SOLUKLU</div><div class="trend-row"><div class="trend-lbl">90+ gün · uzun soluklu</div><div class="trend-track"><div class="trend-fill" style="width:100%"></div></div><div class="trend-val">13</div></div><div class="trend-row"><div class="trend-lbl">≤7 gün · taze test</div><div class="trend-track"><div class="trend-fill" style="width:30%"></div></div><div class="trend-val">4</div></div><div class="trend-row"><div class="trend-lbl">31-90 gün</div><div class="trend-track"><div class="trend-fill" style="width:30%"></div></div><div class="trend-val">4</div></div></div>
-  </div>
 </section>
 <section class="slide">
   <div class="slide-header reveal"><div class="section-tag">PAZAR PAYI</div><h2>Mobil Pazar Payı</h2><div class="rule"></div></div>
@@ -982,8 +979,8 @@ body.edit-mode [contenteditable] { outline: 2px dashed var(--accent); outline-of
   <div class="slide-header reveal"><div class="section-tag">RAKİP RADARI</div><h2>Rakip Kıyaslaması — Mafia Life</h2><div class="rule"></div></div>
   <div class="mv-cols">
     <div class="mv-col"><div class="mv-col-title reveal">⭐ Kendi Oyunumuz</div><div class="mv-row reveal" style="border-left:3px solid #ffd166;"><div class="mv-name" style="color:#ffd166">Mafia Life: Underground Boss<br><small style="color:#8b93a7;font-size:12px"> · ⭐ BİZİM OYUN</small></div><div class="mv-pub"><b>31,962</b> download<br>$895 gelir<br>US, TR, DE, IT</div><div class="mv-delta"><span style="color:#7ee787">▲ +34.0%</span><br><small style="color:#8b93a7;font-size:11px">önceki haftaya göre arttı</small></div></div>
-      <div class="mv-col-title reveal" style="margin-top:16px;">Rakipler (1)</div><div class="mv-rival-grid"><div class="mv-row mv-row-c reveal" style=""><div class="mv-name" style="color:#e8ecf4">Codename Crime-Vice Open World <span style="color:#f6c453" title="%50+ download sıçraması">📈</span><br><small style="color:#8b93a7;font-size:12px">Rakip · tür: text-based mafya</small></div><div class="mv-pub"><b>7,487,605</b> dl<br>$90,969<br>US, IN, ID, BR, PK</div><div class="mv-delta"><span style="color:#7ee787">▲ +2583.2%</span><br><small style="color:#8b93a7;font-size:11px">önceki haftaya göre arttı</small></div></div></div></div>
-    <div class="mv-col"><div class="comp-story"><div class="mv-col-title reveal">Haftanın Hikâyesi</div><div class="own-note reveal">Bu hafta Codename Crime-Vice Open World chart'a 7,487,605 download ile girdi</div><ul class="reveal"><li>Yeni girişlerin zirvesi Codename Crime-Vice Open World (Level Infinite): haftada 7,487,605 download, $90,969 gelir.</li><li>Gelir tarafında yeni oyuncu: Fantasy Life i — az download ile $169,011 gelir (whale odaklı).</li><li>Download listesinin ilk 15'inde en yaygın tür: aksiyon (2 oyun).</li><li>Rakip sıçraması: Codename Crime-Vice Open World download +2,583% WoW — izlemeye alın.</li></ul></div><div class="reveal" style="margin-top:14px;color:#8b93a7;font-size:13px;">📊 Her oyun <b>kendi en güçlü pazarında</b> ölçülür (ABD her oyunda dahil). 📈 = geçen haftaya göre download %50+ sıçradı → kreatiflerini incele.</div></div>
+      <div class="mv-col-title reveal" style="margin-top:16px;">Rakipler (0)</div><div class="mv-empty reveal" style="padding:26px;text-align:center;">Bu hafta kriterlere uyan rakip bulunamadı</div></div>
+    <div class="mv-col"><div class="comp-story"><div class="mv-col-title reveal">Haftanın Hikâyesi</div><div class="own-note reveal">Bu hafta Codename Crime-Vice Open World chart'a 7,487,605 download ile girdi</div><ul class="reveal"><li>Yeni girişlerin zirvesi Codename Crime-Vice Open World (Level Infinite): haftada 7,487,605 download, $90,969 gelir.</li><li>Gelir tarafında yeni oyuncu: Fantasy Life i — az download ile $169,011 gelir (whale odaklı).</li><li>Download listesinin ilk 15'inde en yaygın tür: aksiyon (2 oyun).</li><li>Mafia Life: Underground Boss bu hafta 31,962 download (+34.0% WoW), trend yukarı yönlü.</li></ul></div><div class="reveal" style="margin-top:14px;color:#8b93a7;font-size:13px;">📊 Her oyun <b>kendi en güçlü pazarında</b> ölçülür (ABD her oyunda dahil). 📈 = geçen haftaya göre download %50+ sıçradı → kreatiflerini incele.</div></div>
   </div>
 </section>
 <section class="slide">
@@ -1009,7 +1006,7 @@ body.edit-mode [contenteditable] { outline: 2px dashed var(--accent); outline-of
 <button class="edit-toggle" id="editToggle" title="Düzenleme modu (E)">✏️ Düzenle</button>
 <div class="deck-controls">
   <button id="prevBtn" aria-label="Önceki">←</button>
-  <span class="deck-counter" id="deckCounter">1 / 23</span>
+  <span class="deck-counter" id="deckCounter">1 / 22</span>
   <button id="nextBtn" aria-label="Sonraki">→</button>
 </div>
 <script>
